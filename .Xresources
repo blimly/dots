@@ -4,10 +4,15 @@ Xft.hinting: true
 Xft.hintstyle: hintfull
 Xft.rgba: rgb
 
-URxvt.borderless: true
-URxvt.font:xft:Anonymous Pro:size=11,xft:DejaVu Sans Mono:size=11
-URxvt.letterSpace:1
-URxvt*termName: rxvt
+URxvt.borderless:		true
+URxvt.font:			xft:FiraCode-Regular:pixelsize=12
+URxvt.boldFont: 		xft:FiraCode-Bold:pixelsize=12
+!URxvt.italicFont:		xft:...:pixelsize=12
+!URxvt.boldItalicfont:		xft:...:pixelsize=12
+URxvt.letterSpace:		0
+URxvt.lineSpace:		0
+URxvt.cursorBlink: 		true
+URxvt*termName: 		rxvt
 
 ! disable default bindings
 URxvt.iso14755: false
@@ -28,9 +33,8 @@ URxvt.clipboard.autocopy: 	true
 URxvt.scrollBar: false
 URxvt.matcher.button: 1
 URxvt.transparent: true
-URxvt.boldFont:
 URxvt.cursorUnderline:  true
-URxvt.geometry: 90x30
+URxvt.geometry: 90x20
 URxvt.internalBorder: 23
 URxvt.fading: 0
 URxvt.tintColor: #ffffff
