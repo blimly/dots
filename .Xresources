@@ -34,7 +34,7 @@ URxvt.scrollBar: false
 URxvt.matcher.button: 1
 URxvt.transparent: true
 URxvt.cursorUnderline:  true
-URxvt.geometry: 90x20
+URxvt.geometry: 90x30
 URxvt.internalBorder: 23
 URxvt.fading: 0
 URxvt.tintColor: #ffffff
