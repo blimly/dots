@@ -45,39 +45,30 @@ URxvt.inheritPixmap: False
 URxvt.foreground:  #ebebeb
 URxvt.background:  #262c35
 URxvt.cursorColor: #d9002f
-!
 !! Black
 URxvt.color0:      #191919
 URxvt.color8:      #191919
-!!
 !! Red
 URxvt.color1:      #bf091d
 URxvt.color9:      #bf091d
-!!
 !! Green
 URxvt.color2:      #3d9751
 URxvt.color10:     #3d9751
-!!
 !! Yellow
 URxvt.color3:      #f6bb34
 URxvt.color11:     #f6bb34
-!!
 !! Blue
 URxvt.color4:      #17b2e0
 URxvt.color12:     #17b2e0
-!!
 !! Magenta
 URxvt.color5:      #7830b0
 URxvt.color13:     #7830b0
-!!
 !! Cyan
 URxvt.color6:      #8bd2ed
 URxvt.color14:     #8bd2ed
-!!
 !! White
 URxvt.color7:      #ffffff
 URxvt.color15:     #ffffff
-!!
 !! Bold, Italic, Underline
 URxvt.colorBD:     #fbab19
 URxvt.colorIT:	   #f6bb34
