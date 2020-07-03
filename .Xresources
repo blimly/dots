@@ -1,23 +1,23 @@
 ! Xft settings
-Xft.dpi: 			96
+Xft.dpi:				96
 Xft.antialias: 			true
 Xft.hinting: 			true
 Xft.hintstyle: 			hintslight
-Xft.rgba: 			rgb
+Xft.rgba:				rgb
 
 ! URxvt settings
 URxvt.depth:			32
 URxvt.geometry: 		120x30
 URxvt.borderless:		true
-URxvt*font:			xft:NimbusMonoPS-Regular:pixelsize=14
+URxvt*font:				xft:NimbusMonoPS-Regular:pixelsize=14
 URxvt*boldFont: 		xft:NimbusMonoPS-Bold:pixelsize=14
 URxvt*letterSpace:		0
 URxvt.lineSpace:		0
 URxvt.cursorBlink: 		true
 URxvt.scrollBar: 		false
 URxvt.transparent: 		true
-URxvt.cursorUnderline:  	false
-URxvt.internalBorder: 		25
+URxvt.cursorUnderline:  false
+URxvt.internalBorder: 	25
 
 ! disable default bindings
 URxvt.iso14755: false
@@ -41,34 +41,42 @@ URxvt.shading: 0
 URxvt.inheritPixmap: False
 
 !!!! COLORS
-URxvt.foreground:  #ebebeb
-URxvt.background:  #262c35
-URxvt.cursorColor: #d9002f
-!! Black
-URxvt.color0:      #191919
-URxvt.color8:      #191919
-!! Red
-URxvt.color1:      #bf091d
-URxvt.color9:      #bf091d
-!! Green
-URxvt.color2:      #3d9751
-URxvt.color10:     #3d9751
-!! Yellow
-URxvt.color3:      #f6bb34
-URxvt.color11:     #f6bb34
-!! Blue
-URxvt.color4:      #17b2e0
-URxvt.color12:     #17b2e0
-!! Magenta
-URxvt.color5:      #7830b0
-URxvt.color13:     #7830b0
-!! Cyan
-URxvt.color6:      #8bd2ed
-URxvt.color14:     #8bd2ed
-!! White
-URxvt.color7:      #ffffff
-URxvt.color15:     #ffffff
+*.foreground:  #c2c8d7
+*.background:  #1c262b
+*.cursorColor: #b3b8c3
+!
+! Black
+*.color0:      #000000
+*.color8:      #777777
+!
+! Red
+*.color1:      #ee2b2a
+*.color9:      #dc5c60
+!
+! Green
+*.color2:      #40a33f
+*.color10:     #70be71
+!
+! Yellow
+*.color3:      #ffea2e
+*.color11:     #fff163
+!
+! Blue
+*.color4:      #1e80f0
+*.color12:     #54a4f3
+!
+! Magenta
+*.color5:      #8800a0
+*.color13:     #aa4dbc
+!
+! Cyan
+*.color6:      #16afca
+*.color14:     #42c7da
+!
+! White
+*.color7:      #a4a4a4
+*.color15:     #ffffff
 !! Bold, Italic, Underline
-URxvt.colorBD:     #fbab19
-URxvt.colorIT:	   #f6bb34
-URxvt.colorUL:	   #bf091d
+URxvt.colorBD:     #ffea2e
+URxvt.colorIT:	   #fff163
+URxvt.colorUL:	   #ee2b2a
