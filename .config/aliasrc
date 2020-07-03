@@ -1,0 +1,33 @@
+#!/bin/sh
+
+# -===========-
+#   .aliasrc
+# -===========-
+
+# -------------
+#   VERBOSITY
+alias \
+	cp="cp -iv" \
+       	mv="mv -iv" \
+	rm="rm -vI" \
+	mkd="mkdir -pv" \
+	free="free -h"
+
+# ---------------------
+#   COLORIZE COMMANDS
+alias \
+	ls="ls -hN --color=auto --group-directories-first" \
+	grep="grep --color=auto" \
+	diff="diff --color=auto"
+
+# -----------------
+#   LONG COMMANDS
+alias \
+	ka="killall" \
+	sdn="sudo shutdown -h now" \
+	f="$FILE" \
+	e="$EDITOR" \
+	v="$EDITOR" \
+	p="sudo pacman" \
+	dots="git --git-dir=$HOME/dots --work-tree=$HOME" \
+	h=habitctl

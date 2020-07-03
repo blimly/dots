@@ -10,6 +10,9 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+export VISUAL=vim
+export EDITOR=$VISUAL
+
 # -----------
 #   ALIASES
 [ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
