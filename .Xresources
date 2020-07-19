@@ -9,8 +9,8 @@ Xft.rgba:				rgb
 URxvt.depth:			32
 URxvt.geometry: 		120x30
 URxvt.borderless:		true
-URxvt*font:				xft:NimbusMonoPS-Regular:pixelsize=14
-URxvt*boldFont: 		xft:NimbusMonoPS-Bold:pixelsize=14
+URxvt*font:				xft:NimbusMonoPS-Bold:pixelsize=14
+URxvt*boldFont:			xft:NimbusMonoPS-Bold:pixelsize=14
 URxvt*letterSpace:		0
 URxvt.lineSpace:		0
 URxvt.cursorBlink: 		true
@@ -42,7 +42,7 @@ URxvt.inheritPixmap: False
 
 !!!! COLORS
 *.foreground:  #c2c8d7
-*.background:  #1c262b
+*.background:  [50]#1c262b
 *.cursorColor: #b3b8c3
 !
 ! Black
@@ -80,3 +80,20 @@ URxvt.inheritPixmap: False
 URxvt.colorBD:     #ffea2e
 URxvt.colorIT:	   #fff163
 URxvt.colorUL:	   #ee2b2a
+
+! rofi settings
+rofi.modi:			run
+rofi.width:			100
+rofi.padding:		800
+rofi.opacity:		70
+rofi.lines:			5
+rofi.font:			mono 14
+rofi.bw:			0
+
+rofi.color-enabled:	true
+! state				bg		fg		bgalt	hlbg	hlfg
+rofi.color-normal:	#1c262b,#c2c8d7,#1c262b,#ffea2e,#1c262b
+rofi.color-active:	#1c262b,#ffea2e,#1c262b,#fff163,#c2c8d7
+rofi.color-urgent:	#1c262b,#ee2b2a,#1c262b,#dc5c60,#c2c8d7
+!					bg		border	separator
+rofi.color-window:	#801c262b,#c2c8d7,#b3b8c3
