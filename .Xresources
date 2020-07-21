@@ -89,8 +89,8 @@ URxvt.colorUL:	   #ee2b2a
 ! rofi settings
 rofi.modi:			run
 rofi.width:			100
-rofi.padding:		800
-rofi.opacity:		70
+rofi.padding:		500
+rofi.opacity:		60
 rofi.lines:			5
 rofi.font:			mono 14
 rofi.bw:			0
