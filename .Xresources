@@ -63,7 +63,7 @@ URxvt.inheritPixmap: False
 *.color10:     #70be71
 !
 ! Yellow
-*.color3:      #ffea2e
+*m.color3:      #ffea2e
 *.color11:     #fff163
 !
 ! Blue
@@ -89,7 +89,7 @@ URxvt.colorUL:	   #ee2b2a
 ! rofi settings
 rofi.modi:			run
 rofi.width:			100
-rofi.padding:		800
+rofi.padding:		500
 rofi.opacity:		70
 rofi.lines:			5
 rofi.font:			mono 14

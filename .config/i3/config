@@ -37,6 +37,9 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# custom lockscreen
+bindsym $mod+x			exec ~/.config/i3/lock.sh
+
 # start a terminal
 bindsym $mod+Return exec urxvt
 
@@ -120,7 +123,7 @@ set $ws10 "10: song"
 # Assign programs to windows
 for_window [class="Spotify"] move to workspace $ws10
 assign [class="Vivaldi-stable"] $ws8
-assign [class="Discord"] $ws9
+assign [class="discord"] $ws9
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -175,11 +178,6 @@ bindsym $mod+Shift+u		resize shrink height 10 px or 10 ppt
 bindsym $mod+Shift+i		resize grow height 10 px or 10 ppt
 bindsym $mod+Shift+o		resize grow width 10 px or 10 ppt
 
-
-bindsym $mod+r mode "resize"
-
-
-
 # Background
 exec_always feh --bg-fill /usr/share/backgrounds/back.jpg
 
@@ -195,6 +193,9 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 # finds out, if available)
 bar {
         status_command i3status
+		
+		font pango:NimbusMonoPS-Regular 10
+		
 	    colors {
 			background $bg-color
 	    	separator #666666
