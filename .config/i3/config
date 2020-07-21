@@ -119,7 +119,8 @@ set $ws10 "10: song"
 
 # Assign programs to windows
 for_window [class="Spotify"] move to workspace $ws10
-assign [class="Vivaldi-stable"] $ws6
+assign [class="Vivaldi-stable"] $ws8
+assign [class="Discord"] $ws9
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -185,10 +186,10 @@ exec_always feh --bg-fill /usr/share/backgrounds/back.jpg
 
 # window colors
 #                       border              background         text                 indicator
-client.focused          $bg-color           $bg-color          $text-color          #00ff00
-client.unfocused        $iancative-bg-color $inactive-bg-color $inactive-text-color #00ff00
-client.focused_inactive $iancative-bg-color $inactive-bg-color $inactive-text-color #00ff00
-client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
+client.focused          $bg-color           $bg-color          $text-color          #ffea2e
+client.unfocused        $iancative-bg-color $inactive-bg-color $inactive-text-color #ffea2e
+client.focused_inactive $iancative-bg-color $inactive-bg-color $inactive-text-color #ffea2e
+client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #ffea2e
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -196,7 +197,7 @@ bar {
         status_command i3status
 	    colors {
 			background $bg-color
-	    	separator #757575
+	    	separator #666666
 			#                  border             background         text
 			focused_workspace  $bg-color          $bg-color          $text-color
 			inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
