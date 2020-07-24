@@ -37,8 +37,11 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# custom lockscreen
+# custom lockscren
 bindsym $mod+x			exec ~/.config/i3/lock.sh
+
+# suspend
+bindsym $mod+Shift+x	exec systemctl suspend
 
 # start a terminal
 bindsym $mod+Return exec urxvt
@@ -181,6 +184,8 @@ bindsym $mod+Shift+o		resize grow width 10 px or 10 ppt
 # Background
 exec_always feh --bg-fill /usr/share/backgrounds/back.jpg
 
+# Keyboard layouts en, et
+exec --no-startup-id setxkbmap -layout us,ee -option 'grp:shifts_toggle'
 
 # window colors
 #                       border              background         text                 indicator
@@ -192,7 +197,7 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
+        status_command i3blocks
 		
 		font pango:NimbusMonoPS-Regular 10
 		

@@ -38,11 +38,14 @@ Plug 'Valloric/YouCompleteMe' "autocompletion
 Plug 'mbbill/undotree'
 Plug 'tomasiser/vim-code-dark'
 Plug 'vim-airline/vim-airline'
+Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
 
 colorscheme codedark
 hi Normal guibg=NONE ctermbg=NONE 
+hi LineNr guibg=NONE ctermbg=NONE
+hi EndOfBuffer guibg=NONE ctermbg=NONE
 let g:airline_theme = 'codedark'
 
 let mapleader = " "

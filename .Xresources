@@ -63,7 +63,7 @@ URxvt.inheritPixmap: False
 *.color10:     #70be71
 !
 ! Yellow
-*m.color3:      #ffea2e
+*.color3:      #ffea2e
 *.color11:     #fff163
 !
 ! Blue
