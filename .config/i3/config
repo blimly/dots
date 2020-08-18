@@ -41,7 +41,7 @@ floating_modifier $mod
 bindsym $mod+x			exec ~/.config/i3/lock.sh
 
 # suspend
-bindsym $mod+Shift+x	exec systemctl suspend
+bindsym $mod+Shift+x	exec ~/.config/i3/lock.sh && systemctl suspend
 
 # start a terminal
 bindsym $mod+Return exec urxvt
