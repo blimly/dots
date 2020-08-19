@@ -5,7 +5,7 @@
 set $mod Mod4
 
 # Font for window titles
-font pango:NimbusMonoPS-Regular 10
+font pango:Hack 10, Font Awesome 5 Free Regular
 
 # Elimitate title bars
 default_border pixel
@@ -112,16 +112,27 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # Workspaces
-set $ws1 "1: dev"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5: play"
-set $ws6 "6: web"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9: chat"
-set $ws10 "10: song"
+#set $ws1 "I"   
+#set $ws2 "II"
+#set $ws3 "III"
+#set $ws4 "IV"
+#set $ws5 "V"
+#set $ws6 "VI"
+#set $ws7 "VII"
+#set $ws8 "VIII"
+#set $ws9 "XI"
+#set $ws10 "X"
+
+set $ws1 "1:I"   
+set $ws2 "2:II"
+set $ws3 "3:III"
+set $ws4 "4:IV"
+set $ws5 "5:V"
+set $ws6 "6:VI"
+set $ws7 "7:VII"
+set $ws8 "8:VIII"
+set $ws9 "9:XI"
+set $ws10 "10:X"
 
 # Assign programs to windows
 for_window [class="Spotify"] move to workspace $ws10
@@ -129,28 +140,28 @@ assign [class="Vivaldi-stable"] $ws8
 assign [class="discord"] $ws9
 
 # switch to workspace
-bindsym $mod+1 workspace number $ws1
-bindsym $mod+2 workspace number $ws2
-bindsym $mod+3 workspace number $ws3
-bindsym $mod+4 workspace number $ws4
-bindsym $mod+5 workspace number $ws5
-bindsym $mod+6 workspace number $ws6
-bindsym $mod+7 workspace number $ws7
-bindsym $mod+8 workspace number $ws8
-bindsym $mod+9 workspace number $ws9
-bindsym $mod+0 workspace number $ws10
+bindsym $mod+1 workspace $ws1 
+bindsym $mod+2 workspace $ws2 
+bindsym $mod+3 workspace $ws3 
+bindsym $mod+4 workspace $ws4 
+bindsym $mod+5 workspace $ws5 
+bindsym $mod+6 workspace $ws6 
+bindsym $mod+7 workspace $ws7 
+bindsym $mod+8 workspace $ws8 
+bindsym $mod+9 workspace $ws9 
+bindsym $mod+0 workspace $ws10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace number $ws1
-bindsym $mod+Shift+2 move container to workspace number $ws2
-bindsym $mod+Shift+3 move container to workspace number $ws3
-bindsym $mod+Shift+4 move container to workspace number $ws4
-bindsym $mod+Shift+5 move container to workspace number $ws5
-bindsym $mod+Shift+6 move container to workspace number $ws6
-bindsym $mod+Shift+7 move container to workspace number $ws7
-bindsym $mod+Shift+8 move container to workspace number $ws8
-bindsym $mod+Shift+9 move container to workspace number $ws9
-bindsym $mod+Shift+0 move container to workspace number $ws10
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
 
 # Monitors
 set $monitor_left DisplayPort-1
@@ -198,14 +209,13 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 # finds out, if available)
 bar {
         status_command i3blocks
-		
-		font pango:NimbusMonoPS-Regular 10
-		
-	    colors {
+		strip_workspace_numbers yes
+		font pango:Hack Bold 10, Font Awesome 5 Brands Regular, Font Awesome 5 Free Regular, Font Awesome 5 Free Solid, Hack Bold 10
+		colors {
 			background $bg-color
-	    	separator #666666
-			#                  border             background         text
-			focused_workspace  $bg-color          $bg-color          $text-color
+	        separator $bg-color
+			#                  border             background         text$text-color
+			focused_workspace  $bg-color          $bg-color          #ffea2e 
 			inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
 			urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
 	}	

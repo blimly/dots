@@ -11,7 +11,8 @@ URxvt.geometry: 		120x30
 URxvt.borderless:		true
 
 URxvt*font:				xft:Hack:size=12:style=Regular,\
-						xft:DejaVu Sans Mono:size=12:style=Medium
+						xft:DejaVu Sans Mono:size=12:style=Medium 
+!						xft:Font Awesome 5 Free Regular:size12:style=Regular
 URxvt*boldFont:			xft:Hack:bold:size=12:style=Bold
 URxvt.italicFont:		xft:Hack:italic:size=12:style=Italic
 URxvt.boldItalicFont:	xft:Hack:bold:italic:size=12:style=Bold Italic

@@ -1,0 +1,59 @@
+
+command=~/.config/i3blocks/$BLOCK_NAME
+separator_block_width=32
+markup=pango
+
+[cmus]
+label= 
+separator=false
+command=dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:org.mpris.MediaPlayer2.Player string:Metadata | awk 'BEGIN {RS=" entry\\("; FS="\""}; /artist/ {artist = $4}; /title/ {title = $4} END { print artist" - "title}'
+interval=5
+color=#40a33f
+
+[volume-pulseaudio]
+interval=persist
+SUBSCRIBE=1
+LONG_FORMAT="${SYMB}${VOL}%"
+SHORT_FORMAT="${SYMB}${VOL}%"
+USE_ALSA_NAME=1
+color=#70be71
+
+[wifi]
+label= 
+#INTERFACE=wlan0
+interval=60
+color=#54a4f3
+
+[cpu_usage]
+interval=10
+LABEL= 
+min_width=U 100.00%
+T_WARN=50
+T_CRIT=80
+DECIMALS=2
+color=#aa4dbc
+
+[disk]
+LABEL= 
+#DIR=$HOME
+#ALERT_LOW=10
+interval=300
+color=#54a4f3
+
+# AUR package: xkb-switch-git
+[keybr]
+label= 
+command=bash -c 'xkb-switch;xkb-switch -W'
+interval=persist
+color=#42c7da
+
+[battery-poly]
+LABEL=
+interval=5
+color=#dc5c60
+
+[time]
+command=date '+ %Y.%m.%d  %H:%M '
+interval=5
+color=#ffea2e
+
