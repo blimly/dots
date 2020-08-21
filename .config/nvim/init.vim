@@ -29,11 +29,6 @@ set splitbelow splitright
 " PLUGINS
 call plug#begin('~/.vim/plugged')
 
-Plug 'jremmen/vim-ripgrep'
-Plug 'tpope/vim-fugitive' "git
-Plug 'vim-utils/vim-man'
-Plug 'lyuts/vim-rtags' "c++
-Plug 'kien/ctrlp.vim' "filesearch
 Plug 'Valloric/YouCompleteMe' "autocompletion
 Plug 'mbbill/undotree'
 Plug 'tomasiser/vim-code-dark'
@@ -42,11 +37,14 @@ Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
 
-colorscheme codedark
+set t_Co=16
+colorscheme delek
+"set termguicolors
+"colorscheme codedark
 hi Normal guibg=NONE ctermbg=NONE 
 hi LineNr guibg=NONE ctermbg=NONE
 hi EndOfBuffer guibg=NONE ctermbg=NONE
-let g:airline_theme = 'codedark'
+"let g:airline_theme = 'codedark'
 
 let mapleader = " "
 let g:netrw_browse_split=2
