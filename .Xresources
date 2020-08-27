@@ -6,6 +6,7 @@ Xft.hintstyle: 			hintslight
 Xft.rgba:				rgb
 
 ! URxvt settings
+URxvt*termName:			rxvt-256color
 URxvt.depth:			32
 URxvt.geometry: 		120x30
 URxvt.borderless:		true
