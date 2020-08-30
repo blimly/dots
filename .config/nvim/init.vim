@@ -17,8 +17,10 @@ set nobackup
 set undodir=~/.vim/undodir
 set undofile
 set incsearch
-"highlight ColorColumn ctermbg=0 guibg=lightgrey
-"set colorcolumn=80
+
+" Calcourse note markdown compatible:
+autocmd BufRead,BufNewFile /tmp/calcurse* set filetype=markdown
+autocmd BufRead,BufNewFile ~/.local/share/calcurse/notes/* set filetype=markdown
 
 "autocompletion
 set wildmode=longest,list,full
@@ -33,10 +35,12 @@ Plug 'Valloric/YouCompleteMe' "autocompletion
 Plug 'mbbill/undotree'
 Plug 'tomasiser/vim-code-dark'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
 
+" COLORS
 set t_Co=16
 colorscheme delek
 "set termguicolors
@@ -44,7 +48,7 @@ colorscheme delek
 hi Normal guibg=NONE ctermbg=NONE 
 hi LineNr guibg=NONE ctermbg=NONE
 hi EndOfBuffer guibg=NONE ctermbg=NONE
-"let g:airline_theme = 'codedark'
+let g:airline_theme='base16_grayscale'
 
 let mapleader = " "
 let g:netrw_browse_split=2
