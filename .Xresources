@@ -50,7 +50,7 @@ URxvt.inheritPixmap: False
 
 !!!! COLORS
 *.foreground:  #c2c8d7
-*.background:  [50]#1c262b
+*.background:  [70]#1c262b
 *.cursorColor: #e8e9ed
 !
 ! Black

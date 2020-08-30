@@ -1,6 +1,6 @@
 
 command=~/.config/i3blocks/$BLOCK_NAME
-separator_block_width=32
+separator_block_width=12
 markup=pango
 
 [cmus]
