@@ -31,10 +31,12 @@ alias \
 	p="sudo pacman" \
 	ps="pacman -Ss" \
 	dots="git --git-dir=$HOME/dots --work-tree=$HOME" \
-	h=habitctl
+	h=habitctl \
+	gs="git status"
 
 # ----------------
 #   ABREVIATIONS
 alias \
 	py=python \
-	c=calcurse
+	c=calcurse \
+	nf=neofetch
