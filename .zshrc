@@ -10,9 +10,14 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+
 export VISUAL=nvim
 export EDITOR=$VISUAL
-export PATH=/home/mart/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/var/lib/snapd/snap/bin:/home/mart/.cargo/bin
+PATH=/home/mart/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/var/lib/snapd/snap/bin:/home/mart/.cargo/bin
+npm set prefix ~/.npm
+PATH="$HOME/.npm/bin:$PATH"
+PATH="./node_modules/.bin:$PATH"
+export PATH
 
 # -----------
 #   ALIASES
@@ -45,3 +50,7 @@ PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magent
 # -----------------------
 #   SYNTAX HIGHLIGHTING
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+
+# -------
+#	ROS
+source /opt/ros/noetic/setup.zsh
