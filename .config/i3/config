@@ -86,8 +86,8 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # gaps
-gaps inner 15
-gaps outer 15
+gaps inner 1
+gaps outer 1
 
 bindsym $mod+s			gaps inner current plus 5
 bindsym $mod+Shift+s 	gaps inner current minus 5
@@ -196,17 +196,17 @@ bindsym $mod+Shift+o		resize grow width 10 px or 10 ppt
 exec_always feh --bg-fill /usr/share/backgrounds/back.jpg
 
 # Keyboard layouts en, et
-exec --no-startup-id setxkbmap -layout us,ee -option 'grp:shifts_toggle'
+exec_always --no-startup-id setxkbmap -layout us,ee -option 'grp:shifts_toggle'
 
 # Screenshot
 bindcode 107 exec escrotum -sC
 
 # window colors
 #                       border              background         text                 indicator
-client.focused          $bg-color           $bg-color          $text-color          #ffea2e
-client.unfocused        $iancative-bg-color $inactive-bg-color $inactive-text-color #ffea2e
-client.focused_inactive $iancative-bg-color $inactive-bg-color $inactive-text-color #ffea2e
-client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #ffea2e
+client.focused          $bg-color           $bg-color          $text-color          #1c4246
+client.unfocused        $iancative-bg-color $inactive-bg-color $inactive-text-color #1c4246
+client.focused_inactive $iancative-bg-color $inactive-bg-color $inactive-text-color #1c4246
+client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #1c4246
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
