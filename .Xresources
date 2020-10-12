@@ -1,5 +1,5 @@
 ! Xft settings
-Xft.dpi:				96
+Xft.dpi:				82
 Xft.antialias: 			true
 Xft.hinting: 			true
 Xft.hintstyle: 			hintslight
@@ -15,12 +15,11 @@ URxvt.geometry: 		120x30
 URxvt.borderless:		true
 
 *letterSpace:			0
-*font:					xft:Hack:size=12:style=Regular:minspace=False \
-						9x15 \
+*font:					xft:Fairfax:size=15:style=Medium:antialias=true \
 						xft:Font Awesome 5 Free Regular:size12:style=Regular
-*boldFont:				xft:Hack:bold:size=12:style=Bold
-*italicFont:			xft:Hack:italic:size=12:style=Italic
-*boldItalicFont:		xft:Hack:bold:italic:size=12:style=Bold Italic
+*boldFont:				xft:Fairfax:bold:size=15:style=Bold:antialias=true
+*italicFont:			xft:Fairfax:italic:size=15:style=Italic:antialias=true
+*boldItalicFont:		xft:Fairfax:bold:italic:size=15:style=Bold Italic:antialias=true
 
 URxvt.lineSpace:		0
 URxvt.cursorBlink: 		true
@@ -51,45 +50,46 @@ URxvt.shading: 0
 URxvt.inheritPixmap: False
 
 !!!! COLORS
-*.foreground:  #c2c8d7
-*.background:  #1c262b
-*.cursorColor: #e8e9ed
+*.foreground:  #403f53
+*.background:  #ffffff
+*.cursorColor: #403f53
 !
 ! Black
-*.color0:      #000000
-*.color8:      #777777
+*.color0:      #011627
+*.color8:      #7a8181
 !
 ! Red
-*.color1:      #ee2b2a
-*.color9:      #dc5c60
+*.color1:      #d3423e
+*.color9:      #f76e6e
 !
 ! Green
-*.color2:      #40a33f
-*.color10:     #70be71
+*.color2:      #2aa298
+*.color10:     #49d0c5
 !
 ! Yellow
-*.color3:      #ffea2e
-*.color11:     #fff163
+*.color3:      #daaa01
+*.color11:     #dac26b
 !
 ! Blue
-*.color4:      #1e80f0
-*.color12:     #54a4f3
+*.color4:      #4876d6
+*.color12:     #5ca7e4
 !
-! Magent
-*.color5:      #8800a0
-*.color13:     #aa4dbc
+! Magenta
+*.color5:      #403f53
+*.color13:     #697098
 !
 ! Cyan
-*.color6:      #16afca
-*.color14:     #42c7da
+*.color6:      #08916a
+*.color14:     #00c990
 !
 ! White
-*.color7:      #d4d4d4
-*.color15:     #ffffff
-!! Bold, Italic, Underline
-.colorBD:     #ffea2e
-.colorIT:	   #aa4dbc
-.colorUL:	   #ee2b2a
+*.color7:      #7a8181
+*.color15:     #989fb1
+!
+! Bold, Italic, Underline
+*.colorBD:     #403f53
+.colorIT:	   #daaa01
+.colorUL:	   #f76e6e
 
 ! rofi settings
 rofi.modi:			run
