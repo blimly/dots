@@ -8,7 +8,7 @@ label=
 separator=false
 command=dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:org.mpris.MediaPlayer2.Player string:Metadata | awk 'BEGIN {RS=" entry\\("; FS="\""}; /artist/ {artist = $4}; /title/ {title = $4} END { print artist" - "title}'
 interval=5
-color=#40a33f
+color=#808080
 
 [volume-pulseaudio]
 interval=persist
@@ -16,7 +16,7 @@ SUBSCRIBE=1
 LONG_FORMAT="${SYMB}${VOL}%"
 SHORT_FORMAT="${SYMB}${VOL}%"
 USE_ALSA_NAME=1
-color=#70be71
+color=#808080
 
 [wifi]
 label= 
@@ -28,32 +28,32 @@ color=#54a4f3
 interval=10
 LABEL= 
 min_width=U 100.00%
-T_WARN=50
-T_CRIT=80
-DECIMALS=2
-color=#aa4dbc
+T_WARN=75
+T_CRIT=90
+DECIMALS=1
+color=#808080
 
 [disk]
 LABEL= 
 #DIR=$HOME
 #ALERT_LOW=10
 interval=300
-color=#54a4f3
+color=#808080
 
 # AUR package: xkb-switch-git
 [keybr]
 label= 
 command=bash -c 'xkb-switch;xkb-switch -W'
 interval=persist
-color=#42c7da
+color=#808080
 
 [battery-poly]
 LABEL=
 interval=5
-color=#dc5c60
+color=#404040
 
 [time]
 command=date '+ %Y.%m.%d  %H:%M '
 interval=5
-color=#ffea2e
+color=#404040
 

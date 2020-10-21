@@ -45,7 +45,7 @@ bindkey -v '^?' backward-delete-char
 # ----------
 #   COLORS
 autoload -U colors && colors
-PS1="%B%{$fg[red]%}[%{$fg[blue]%}%n%{$fg[green]%}@%{$fg[yellow]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
+PS1="%B%{$fg[red]%}[%{$fg[blue]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 
 # -----------------------
 #   SYNTAX HIGHLIGHTING

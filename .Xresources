@@ -16,8 +16,9 @@ URxvt.borderless:		true
 
 *letterSpace:			0
 *font:					xft:Fairfax:size=15:style=Medium:antialias=true \
-						xft:Font Awesome 5 Free Regular:size12:style=Regular
-*boldFont:				xft:Fairfax:bold:size=15:style=Bold:antialias=true
+						xft:Font Awesome 5 Free Regular:size=12:style=Regular \
+						xft:TerminessTTF Nerd Font:size=12:style=Medium
+*boldFont:				xft:Fairfax:bold:size=15:style=Bold
 *italicFont:			xft:Fairfax:italic:size=15:style=Italic:antialias=true
 *boldItalicFont:		xft:Fairfax:bold:italic:size=15:style=Bold Italic:antialias=true
 
@@ -49,47 +50,27 @@ URxvt.tintColor: #ffffff
 URxvt.shading: 0
 URxvt.inheritPixmap: False
 
-!!!! COLORS
-*.foreground:  #403f53
-*.background:  #ffffff
-*.cursorColor: #403f53
-!
-! Black
-*.color0:      #011627
-*.color8:      #7a8181
-!
-! Red
-*.color1:      #d3423e
-*.color9:      #f76e6e
-!
-! Green
-*.color2:      #2aa298
-*.color10:     #49d0c5
-!
-! Yellow
-*.color3:      #daaa01
-*.color11:     #dac26b
-!
-! Blue
-*.color4:      #4876d6
-*.color12:     #5ca7e4
-!
-! Magenta
-*.color5:      #403f53
-*.color13:     #697098
-!
-! Cyan
-*.color6:      #08916a
-*.color14:     #00c990
-!
-! White
-*.color7:      #7a8181
-*.color15:     #989fb1
-!
-! Bold, Italic, Underline
-*.colorBD:     #403f53
-.colorIT:	   #daaa01
-.colorUL:	   #f76e6e
+
+*.foreground:   #020202
+*.background:   #d3d0c7
+*.cursorColor:  #020202
+*.color0:       #404040
+*.color8:       #808080
+*.color1:       #e34444
+*.color9:       #e35f5f
+*.color2:       #208c71
+*.color10:      #42a690
+*.color3:       #ffb200
+*.color11:      #f9c604
+*.color4:       #000082
+*.color12:      #3771a4
+*.color5:       #a857a8
+*.color13:      #a876a8
+*.color6:       #008080
+*.color14:      #329999
+*.color7:       #c0c0c0
+*.color15:      #ffffff
+
 
 ! rofi settings
 rofi.modi:			run

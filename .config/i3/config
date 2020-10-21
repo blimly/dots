@@ -11,11 +11,11 @@ font pango:Hack 10, Font Awesome 5 Free Regular
 default_border pixel
 
 # Colors
-set $bg-color 	         #1c262b
-set $inactive-bg-color   #1c262b
-set $text-color          #f3f4f5
-set $inactive-text-color #676E7D
-set $urgent-bg-color     #ee2b2a
+set $bg-color 	         #d3d0c7
+set $inactive-bg-color   #d3d0c7
+set $text-color          #ffb200
+set $inactive-text-color #808080
+set $urgent-bg-color     #e34444
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
