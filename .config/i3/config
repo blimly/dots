@@ -44,7 +44,7 @@ bindsym $mod+x			exec ~/.config/i3/lock.sh
 bindsym $mod+Shift+x	exec ~/.config/i3/lock.sh && systemctl suspend
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill

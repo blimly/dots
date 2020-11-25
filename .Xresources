@@ -15,12 +15,12 @@ URxvt.geometry: 		120x30
 URxvt.borderless:		true
 
 *letterSpace:			0
-*font:					xft:Fairfax:size=15:style=Medium:antialias=true \
+*font:					xft:Fairfax:size=16:style=Medium:antialias=true \
 						xft:Font Awesome 5 Free Regular:size=12:style=Regular \
 						xft:TerminessTTF Nerd Font:size=12:style=Medium
-*boldFont:				xft:Fairfax:bold:size=15:style=Bold
-*italicFont:			xft:Fairfax:italic:size=15:style=Italic:antialias=true
-*boldItalicFont:		xft:Fairfax:bold:italic:size=15:style=Bold Italic:antialias=true
+*boldFont:				xft:Fairfax:size=16:style=Bold
+*italicFont:			xft:Fairfax:size=16:style=Italic:antialias=true
+*boldItalicFont:		xft:Fairfax:size=16:style=Bold:antialias=true
 
 URxvt.lineSpace:		0
 URxvt.cursorBlink: 		true
@@ -52,7 +52,7 @@ URxvt.inheritPixmap: False
 
 
 *.foreground:   #020202
-*.background:   #d3d0c7
+*.background:   #e0e7e3
 *.cursorColor:  #020202
 *.color0:       #404040
 *.color8:       #808080
@@ -60,8 +60,8 @@ URxvt.inheritPixmap: False
 *.color9:       #e35f5f
 *.color2:       #208c71
 *.color10:      #42a690
-*.color3:       #ffb200
-*.color11:      #f9c604
+*.color3:       #8e4200
+*.color11:      #db6f02
 *.color4:       #000082
 *.color12:      #3771a4
 *.color5:       #a857a8
