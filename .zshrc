@@ -42,14 +42,39 @@ bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -v '^?' backward-delete-char
 
-# ----------
-#   COLORS
-autoload -U colors && colors
-PS1="%B%{$fg[red]%}[%{$fg[blue]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
-
 # -----------------------
 #   SYNTAX HIGHLIGHTING
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 # -------
-#	ROS
-source /opt/ros/noetic/setup.zsh
+# kitty complition
+kitty + complete setup zsh | source /dev/stdin
+
+
+# -----------------------------
+# taskwarior shell integration
+function task_indicator {
+	TASK="task"
+	URGENT="(>.<) urgent"
+	DUETOMORROW="(^_^) tomorrow"
+	DUETODAY="(=_=) today"
+	OVERDUE="(X_X) ovedue"
+
+	if [ `$TASK +READY +OVERDUE count` -gt "0" ]; then
+		echo "$OVERDUE"
+	elif [ `$TASK +READY +DUETODAY count` -gt "0" ]; then
+		echo "$DUETODAY"
+	elif [ `$TASK +READY +TOMORROW count` -gt "0" ]; then
+		echo "$DUETOMORROW"
+	elif [ `$TASK +READY 'urgency > 12' count` -gt "0" ]; then
+		echo "$URGENT"
+	else 
+		echo "$"
+	fi
+}
+
+# ----------
+#   COLORS
+autoload -U colors && colors
+#PS1="%B%{$fg[red]%}[%{$fg[blue]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b $(task_indicator)"
+PS1="%B%{$fg[red]%}[%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%} $(task_indicator) $%b "
+

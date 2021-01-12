@@ -5,17 +5,17 @@
 set $mod Mod1
 
 # Font for window titles
-font pango:Hack 10, Font Awesome 5 Free Regular
+font pango:Alma Mono 10, Hack 10, Font Awesome 5 Free Regular
 
 # Elimitate title bars
 default_border pixel
 
 # Colors
-set $bg-color 	         #d3d0c7
-set $inactive-bg-color   #d3d0c7
-set $text-color          #ffb200
-set $inactive-text-color #808080
-set $urgent-bg-color     #e34444
+set $bg-color 	         #1d1d26
+set $inactive-bg-color   #1d1d26
+set $text-color          #ff3399
+set $inactive-text-color #d5d6f3
+set $urgent-bg-color     #cc66ff
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -86,8 +86,8 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # gaps
-gaps inner 1
-gaps outer 1
+gaps inner 2
+gaps outer 5
 
 bindsym $mod+s			gaps inner current plus 5
 bindsym $mod+Shift+s 	gaps inner current minus 5
@@ -136,7 +136,6 @@ set $ws10 "10:X"
 
 # Assign programs to windows
 for_window [class="Spotify"] move to workspace $ws10
-assign [class="Vivaldi-stable"] $ws8
 assign [class="discord"] $ws9
 
 # switch to workspace
@@ -195,7 +194,7 @@ bindsym $mod+Shift+o		resize grow width 10 px or 10 ppt
 exec_always --no-startup-id setxkbmap -layout us,ee -option 'grp:shifts_toggle'
 
 # Screenshot
-bindcode 107 exec escrotum -sC
+bindsym $mod+p exec escrotum -sC
 
 # window colors
 #                       border              background         text                 indicator
@@ -210,54 +209,21 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 bar {
         status_command i3blocks
 		strip_workspace_numbers yes
-		font pango:Hack Bold 10, Font Awesome 5 Brands Regular, Font Awesome 5 Free Regular, Font Awesome 5 Free Solid, Hack Bold 10
+		font pango:Alma Mono 10,Hack Bold 10, Font Awesome 5 Brands Regular, Font Awesome 5 Free Regular, Font Awesome 5 Free Solid, Hack Bold 10
 		colors {
 			background $bg-color
 	        separator $bg-color
 			#                  border             background         text$text-color
-			focused_workspace  $bg-color          $bg-color          #ffea2e 
+			focused_workspace  $bg-color          $bg-color          #ff3399
 			inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
 			urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
 	}	
 }
 exec --no-startup-id compton
 
-exec_always ~/.config/i3/dual.sh
 # Background
 #exec_always feh --bg-center --image_bg "#ffffff" /usr/share/backgrounds/back2.jpg 
-exec_always --no-startup-id hsetroot -solid white -center /usr/share/backgrounds/back3.jpg
+exec_always --no-startup-id hsetroot -tile .local/share/backgrounds/back.jpg
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+exec_always ~/.config/i3/dual.sh
 
