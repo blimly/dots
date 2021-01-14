@@ -38,10 +38,10 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # custom lockscren
-bindsym $mod+x			exec ~/.config/i3/lock.sh
+bindsym $mod+x			exec i3lock-fancy -f Alma-Mono-Heavy 
 
 # suspend
-bindsym $mod+Shift+x	exec ~/.config/i3/lock.sh && systemctl suspend
+bindsym $mod+Shift+x	exec i3lock-fancy -f Alma-Mono-Heavy && systemctl suspend
 
 # start a terminal
 bindsym $mod+Return exec kitty
@@ -86,8 +86,8 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # gaps
-gaps inner 2
-gaps outer 5
+gaps inner 5
+gaps outer 10
 
 bindsym $mod+s			gaps inner current plus 5
 bindsym $mod+Shift+s 	gaps inner current minus 5
@@ -223,7 +223,7 @@ exec --no-startup-id compton
 
 # Background
 #exec_always feh --bg-center --image_bg "#ffffff" /usr/share/backgrounds/back2.jpg 
-exec_always --no-startup-id hsetroot -tile .local/share/backgrounds/back.jpg
+exec_always --no-startup-id hsetroot -cover .local/share/backgrounds/back.jpg
 
 exec_always ~/.config/i3/dual.sh
 

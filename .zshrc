@@ -76,5 +76,5 @@ function task_indicator {
 #   COLORS
 autoload -U colors && colors
 #PS1="%B%{$fg[red]%}[%{$fg[blue]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b $(task_indicator)"
-PS1="%B%{$fg[red]%}[%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%} $(task_indicator) $%b "
+PS1="%B%{$fg[red]%}[%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 
