@@ -3,12 +3,18 @@ command=~/.config/i3blocks/$BLOCK_NAME
 separator_block_width=12
 markup=pango
 
+[agenda]
+label= 
+command=gcalcli agenda | head -2 | tail -1 | sed -r "s:\x1B\[[0-9;]*[mK]::g" | sed -e "s/[[:space:]]\+/ /g"
+interval=900
+color=#c0c0c0
+
 [cmus]
 label= 
 separator=false
 command=dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:org.mpris.MediaPlayer2.Player string:Metadata | awk 'BEGIN {RS=" entry\\("; FS="\""}; /artist/ {artist = $4}; /title/ {title = $4} END { print artist" - "title}'
 interval=5
-color=#808080
+color=#606060
 
 [volume-pulseaudio]
 interval=persist
@@ -16,13 +22,13 @@ SUBSCRIBE=1
 LONG_FORMAT="${SYMB}${VOL}%"
 SHORT_FORMAT="${SYMB}${VOL}%"
 USE_ALSA_NAME=1
-color=#808080
+color=#606060
 
 [wifi]
 label= 
 #INTERFACE=wlan0
 interval=60
-color=#54a4f3
+color=#606060
 
 [cpu_usage]
 interval=10
@@ -31,29 +37,29 @@ min_width=U 100.00%
 T_WARN=75
 T_CRIT=90
 DECIMALS=1
-color=#808080
+color=#606060
 
 [disk]
 LABEL= 
 #DIR=$HOME
 #ALERT_LOW=10
 interval=300
-color=#808080
+color=#606060
 
 # AUR package: xkb-switch-git
 [keybr]
 label= 
 command=bash -c 'xkb-switch;xkb-switch -W'
 interval=persist
-color=#808080
+color=#606060
 
 [battery-poly]
 LABEL=
 interval=5
-color=#404040
+color=#808080
 
 [time]
-command=date '+ %Y.%m.%d  %H:%M '
+command=date '+ %Y.%m.%d  %H:%M '
 interval=5
-color=#404040
+color=#808080
 
