@@ -3,12 +3,6 @@ command=~/.config/i3blocks/$BLOCK_NAME
 separator_block_width=12
 markup=pango
 
-[agenda]
-label= 
-command=gcalcli agenda now | head -2 | tail -1 | sed -r "s:\x1B\[[0-9;]*[mK]::g" | sed -e "s/[[:space:]]\+/ /g"
-interval=900
-color=#c0c0c0
-
 [cmus]
 label= 
 separator=false

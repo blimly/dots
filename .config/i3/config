@@ -38,19 +38,21 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # custom lockscren
-bindsym $mod+x			exec i3lock-fancy -f Alma-Mono-Heavy 
+bindsym $mod+x			exec systemctl suspend
 
 # suspend
 bindsym $mod+Shift+x	exec i3lock-fancy -f Alma-Mono-Heavy && systemctl suspend
 
 # start a terminal
-bindsym $mod+Return exec kitty
+bindsym $mod+Return		exec kitty
+
+bindsym $mod+n			exec Thunar
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+Shift+q	kill
 
 # start rofi (a program launcher)
-bindsym $mod+d exec rofi -show run 
+bindsym $mod+d			exec rofi -show run 
 
 # change focus
 bindsym $mod+h focus left
@@ -86,9 +88,6 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # gaps
-gaps inner 5
-gaps outer 10
-
 bindsym $mod+s			gaps inner current plus 5
 bindsym $mod+Shift+s 	gaps inner current minus 5
 
@@ -120,7 +119,7 @@ bindsym $mod+a focus parent
 #set $ws6 "VI"
 #set $ws7 "VII"
 #set $ws8 "VIII"
-#set $ws9 "XI"
+#set $ws9 "IX"
 #set $ws10 "X"
 
 set $ws1 "1:I"   
@@ -131,7 +130,7 @@ set $ws5 "5:V"
 set $ws6 "6:VI"
 set $ws7 "7:VII"
 set $ws8 "8:VIII"
-set $ws9 "9:XI"
+set $ws9 "9:IX"
 set $ws10 "10:X"
 
 # Assign programs to windows
@@ -162,22 +161,6 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
-# Monitors
-set $monitor_left DisplayPort-1
-set $monitor_right HDMI-A-0
-
-# Setup workspaces
-workspace $ws1 output $monitor_left
-workspace $ws2 output $monitor_left
-workspace $ws3 output $monitor_left
-workspace $ws4 output $monitor_left
-workspace $ws5 output $monitor_left
-workspace $ws6 output $monitor_right
-workspace $ws7 output $monitor_right
-workspace $ws8 output $monitor_right
-workspace $ws9 output $monitor_right
-workspace $ws10 output $monitor_right
-
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -186,10 +169,10 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
-bindsym $mod+Shift+y		resize shrink width 10 px or 10 ppt
-bindsym $mod+Shift+u		resize shrink height 10 px or 10 ppt
-bindsym $mod+Shift+i		resize grow height 10 px or 10 ppt
-bindsym $mod+Shift+o		resize grow width 10 px or 10 ppt
+bindsym $mod+Shift+y		resize shrink width 5 px or 5 ppt
+bindsym $mod+Shift+u		resize shrink height 5 px or 5 ppt
+bindsym $mod+Shift+i		resize grow height 5 px or 5 ppt
+bindsym $mod+Shift+o		resize grow width 5 px or 5 ppt
 
 exec_always --no-startup-id setxkbmap -layout us,ee -option 'grp:shifts_toggle'
 
@@ -209,7 +192,7 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 bar {
         status_command i3blocks
 		strip_workspace_numbers yes
-		font pango:Alma Mono 10,Hack Bold 10, Font Awesome 5 Brands Regular, Font Awesome 5 Free Regular, Font Awesome 5 Free Solid, Hack Bold 10
+		font pango: Font Awesome 5 Brands Regular, Font Awesome 5 Free Regular, Font Awesome 5 Free Solid, Alma Mono Bold 12
 		colors {
 			background $bg-color
 	        separator $bg-color
@@ -222,8 +205,5 @@ bar {
 exec --no-startup-id compton
 
 # Background
-#exec_always feh --bg-center --image_bg "#ffffff" /usr/share/backgrounds/back2.jpg 
 exec_always --no-startup-id hsetroot -cover .local/share/backgrounds/back.jpg
-
-exec_always ~/.config/i3/dual.sh
 
