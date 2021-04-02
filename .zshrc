@@ -17,6 +17,8 @@ PATH=/home/mart/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/lib
 npm set prefix ~/.npm
 PATH="$HOME/.npm/bin:$PATH"
 PATH="./node_modules/.bin:$PATH"
+PATH="/home/mart/.local/share/gem/ruby/2.7.0/bin:$PATH"
+
 export PATH
 
 # -----------

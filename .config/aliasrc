@@ -33,7 +33,8 @@ alias \
 	dots="git --git-dir=$HOME/dots --work-tree=$HOME" \
 	h=habitctl \
 	gs="git status" \
-	gitgraph="git log --graph --decorate --oneline"
+	gitgraph="git log --graph --decorate --oneline" \
+	burn="task burndown.daily"
 	
 
 # ----------------
