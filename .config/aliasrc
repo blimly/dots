@@ -51,3 +51,7 @@ alias \
 	vnc="vncviewer 192.168.1.7:5900" \
 	sshrpi="ssh root@192.168.1.7"
 
+# docker
+alias \
+    dockerstopall="docker stop $(docker ps -q)" \
+    dockerup="docker-compose up -d"

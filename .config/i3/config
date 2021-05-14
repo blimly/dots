@@ -2,7 +2,7 @@
 # | i3 config |
 #  -=========-
 
-set $mod Mod4
+set $mod Mod1
 
 # Font for window titles
 font pango:Alma Mono 10, Hack 10, Font Awesome 5 Free Regular
@@ -209,4 +209,4 @@ exec_always --no-startup-id hsetroot -cover .local/share/backgrounds/back.jpg
 
 
 ## Floating window for game
-for_window [class="Hello World!" instance="Hello World!"] floating enable
+for_window [class="JavaGame" instance="JavaGame"] floating enable
