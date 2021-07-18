@@ -11,9 +11,9 @@ font pango:Alma Mono 10, Hack 10, Font Awesome 5 Free Regular
 default_border pixel
 
 # Colors
-set $bg-color 	         #1d1d26
-set $inactive-bg-color   #1d1d26
-set $text-color          #ff3399
+set $bg-color 	         #2B3346
+set $inactive-bg-color   #2B3346
+set $text-color          #FF83A7
 set $inactive-text-color #d5d6f3
 set $urgent-bg-color     #cc66ff
 
@@ -52,7 +52,8 @@ bindsym $mod+n			exec Thunar
 bindsym $mod+Shift+q	kill
 
 # start rofi (a program launcher)
-bindsym $mod+d			exec rofi -show run 
+bindsym $mod+d			exec --no-startup-id ~/.config/rofi/launchers/colorful/launcher.sh
+bindsym $mod+Escape		exec --no-startup-id ~/.config/rofi/bin/powermenu
 
 # change focus
 bindsym $mod+h focus left

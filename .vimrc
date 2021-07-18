@@ -21,17 +21,22 @@ set incsearch
 " splits to open at bottom and right
 set splitbelow splitright
 
-
 " set path to current file and all the 
 " directories traversed down from current
 set path=.,**
 
 call plug#begin('~/.vim/plugged')
 Plug 'owozsh/amora'
+Plug 'preservim/nerdtree'
 call plug#end()
 
-colorscheme amora
+let g:mode = 'focus'
+
+colorscheme delek
 "set t_Co=256
 "hi Normal guibg=NONE ctermbg=NONE
 "hi LineNr guibg=NONE ctermbg=NONE
 "hi EndOfBuffer guibg=NONE ctermbg=NONE
+
+
+nnoremap <C-n> :NERDTree<CR>
